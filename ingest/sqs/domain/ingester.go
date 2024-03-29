@@ -3,7 +3,7 @@ package domain
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/sqs/sqsdomain/repository"
+	"github.com/osmosis-labs/sqs/sqsdomain"
 
 	poolmanagertypes "github.com/osmosis-labs/osmosis/v23/x/poolmanager/types"
 )
@@ -19,12 +19,12 @@ type Ingester interface {
 	ProcessChangedBlockData(ctx sdk.Context, changedPools BlockPools) error
 }
 
-// PoolIngester is an interface that defines the methods for the pool ingester.
-type PoolIngester interface {
-	// ProcessPoolState processes the pool state and ingests data into a sink.
-	// It appends all updates into a transaction for atomic commit at the end of the block.
-	// Returns error if the ingester fails to process pool data.
-	ProcessPoolState(ctx sdk.Context, tx repository.Tx, blockPools BlockPools) error
+// PoolsTransformer is an interface that defines the methods for the pool transformer
+type PoolsTransformer interface {
+	// Transform processes the pool state, returning pools instrumented with all the necessary chain data.
+	// Additionally, returns the take fee map for every pool denom pair.
+	// Returns error if the transformer fails to process pool data.
+	Transform(ctx sdk.Context, blockPools BlockPools) ([]sqsdomain.PoolI, sqsdomain.TakerFeeMap, error)
 }
 
 // BlockPools contains the pools to be ingested in a block.
