@@ -32,7 +32,7 @@ require (
 	github.com/ory/dockertest/v3 v3.10.0
 	github.com/osmosis-labs/go-mutesting v0.0.0-20221208041716-b43bcd97b3b3
 	github.com/osmosis-labs/osmosis/osmomath v0.0.9-0.20240312193551-6c010fa93f60
-	github.com/osmosis-labs/osmosis/osmoutils v0.0.9-0.20240312193551-6c010fa93f60
+	github.com/osmosis-labs/osmosis/osmoutils v0.0.9
 	github.com/osmosis-labs/osmosis/x/epochs v0.0.5-0.20240312193551-6c010fa93f60
 	github.com/osmosis-labs/osmosis/x/ibc-hooks v0.0.11-0.20240312193551-6c010fa93f60
 	github.com/osmosis-labs/sqs/sqsdomain v0.0.0-20240327132234-be32305a2a6e
@@ -87,6 +87,7 @@ require (
 	github.com/butuzov/mirror v1.1.0 // indirect
 	github.com/catenacyber/perfsprint v0.2.0 // indirect
 	github.com/ccojocar/zxcvbn-go v1.0.1 // indirect
+	github.com/chenzhuoyu/iasm v0.9.1 // indirect
 	github.com/chzyer/readline v1.5.1 // indirect
 	github.com/cockroachdb/apd/v2 v2.0.2 // indirect
 	github.com/cockroachdb/errors v1.11.1 // indirect
@@ -166,6 +167,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.24.0 // indirect
 	go.tmz.dev/musttag v0.7.2 // indirect
 	go.uber.org/zap v1.26.0 // indirect
+	golang.org/x/arch v0.7.0 // indirect
 	golang.org/x/oauth2 v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028 // indirect
